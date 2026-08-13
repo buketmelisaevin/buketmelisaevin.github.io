@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Vhi mobile app UX redesign case study by Buket Melisa Evin."
+    >
+
+    <title>Vhi App Redesign | Buket Melisa Evin</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/vhi.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         READING PROGRESS
+    ====================================================== -->
+
+    <div
+        class="reading-progress"
+        aria-hidden="true"
+    >
+        <span id="reading-progress-bar"></span>
+    </div>
+
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header
+        class="project-header"
+        id="project-header"
+    >
+
+        <nav class="project-navbar">
+
+
+            <!-- BRAND -->
+
+            <a
+                class="project-brand"
+                href="../index.html"
+                aria-label="Return to Melisa portfolio homepage"
+            >
+
+                <img
+                    src="../assets/images/melisa-flower.png"
+                    alt=""
+                    class="project-brand-flower"
+                >
+
+                <span class="project-brand-name">
+                    MELISA
+                </span>
+
+            </a>
+
+
+
+            <!-- NAVIGATION -->
+
+            <div class="project-nav-links">
+
+                <a href="../index.html">
+                    Home
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+
+
+            <!-- PROJECT CONTEXT -->
+
+            <div
+                class="project-context"
+                aria-label="Current page: Vhi case study"
+            >
+
+                <span
+                    class="project-context-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span>
+                    Vhi Case Study
+                </span>
+
+            </div>
+
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="vhi-hero">
+
+
+            <div
+                class="hero-orb hero-orb-one"
+                aria-hidden="true"
+            ></div>
+
+
+            <div
+                class="hero-orb hero-orb-two"
+                aria-hidden="true"
+            ></div>
+
+
+
+            <div class="vhi-hero-inner">
+
+
+                <!-- HERO COPY -->
+
+                <div class="vhi-hero-copy">
+
+
+                    <a
+                        class="back-link"
+                        href="../index.html#projects"
+                    >
+
+                        <span aria-hidden="true">
+                            ←
+                        </span>
+
+                        Back to Projects
+
+                    </a>
+
+
+
+                    <p class="vhi-kicker">
+                        HEALTHCARE UX • PRODUCT DESIGN • INFORMATION ARCHITECTURE
+                    </p>
+
+
+
+                    <h1>
+
+                        Designing a
+
+                        <span>
+                            clearer
+                        </span>
+
+                        healthcare
+                        experience.
+
+                    </h1>
+
+
+
+                    <p class="vhi-hero-lead">
+
+                        A redesign of the Vhi mobile app focused on
+                        improving service discovery, homepage hierarchy
+                        and navigation clarity while keeping the
+                        experience familiar.
+
+                    </p>
+
+
+
+                    <div class="hero-actions">
+
+
+                        <a
+                            class="vhi-button vhi-button-primary"
+                            href="#audit"
+                        >
+
+                            Explore the Redesign
+
+                            <span aria-hidden="true">
+                                ↓
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            class="vhi-button vhi-button-secondary"
+                            href="#navigation"
+                        >
+
+                            View Approach
+
+                        </a>
+
+
+                    </div>
+
+
+
+                    <div class="project-meta">
+
+
+                        <div class="project-meta-item">
+
+                            <span>
+                                Focus
+                            </span>
+
+                            <strong>
+                                Navigation & Discoverability
+                            </strong>
+
+                        </div>
+
+
+                        <div class="project-meta-item">
+
+                            <span>
+                                Approach
+                            </span>
+
+                            <strong>
+                                UX Audit & Information Architecture
+                            </strong>
+
+                        </div>
+
+
+                        <div class="project-meta-item">
+
+                            <span>
+                                Tool
+                            </span>
+
+                            <strong>
+                                Figma
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- HERO VISUAL -->
+
+                <div class="vhi-hero-visual">
+
+
+                    <div
+                        class="hero-annotation hero-annotation-search"
+                        aria-hidden="true"
+                    >
+                        Universal search
+                    </div>
+
+
+                    <div
+                        class="hero-annotation hero-annotation-actions"
+                        aria-hidden="true"
+                    >
+                        Custom quick actions
+                    </div>
+
+
+                    <div
+                        class="hero-annotation hero-annotation-health"
+                        aria-hidden="true"
+                    >
+                        Clearer service structure
+                    </div>
+
+
+
+                    <!-- HOME PHONE -->
+
+                    <div class="vhi-phone hero-phone hero-phone-home">
+
+                        <div class="vhi-phone-screen">
+
+                            <img
+                                src="../assets/images/vhi-home-redesign.png"
+                                alt="Redesigned Vhi homepage featuring universal search and customisable quick actions"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- HEALTH PHONE -->
+
+                    <div class="vhi-phone hero-phone hero-phone-health">
+
+                        <div class="vhi-phone-screen">
+
+                            <img
+                                src="../assets/images/vhi-health-redesign.png"
+                                alt="Redesigned Vhi Health area with healthcare services organised into clearer sections"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTEXT
+        ================================================== -->
+
+        <section
+            class="case-section case-white reveal"
+            id="context"
+        >
+
+            <div class="case-container context-grid">
+
+
+                <div>
+
+                    <p class="section-label">
+                        The Context
+                    </p>
+
+
+                    <h2 class="context-heading">
+                        Clearer structure for a growing ecosystem.
+                    </h2>
+
+                </div>
+
+
+
+                <div class="context-copy">
+
+
+                    <p>
+
+                        Vhi provides members with access to healthcare,
+                        insurance, support, wellbeing and partner
+                        services through one mobile application.
+
+                    </p>
+
+
+                    <p>
+
+                        As that ecosystem grows, simply adding more
+                        destinations can make the experience harder to
+                        understand. Important functions can become
+                        buried inside categories while permanent
+                        navigation space becomes increasingly valuable.
+
+                    </p>
+
+
+                    <p>
+
+                        I approached the redesign by looking first at
+                        the structure underneath the interface:
+                        navigation priorities, service discovery,
+                        homepage hierarchy and scalability.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             UX AUDIT
+        ================================================== -->
+
+        <section
+            class="case-section audit-section reveal"
+            id="audit"
+        >
+
+            <div class="case-container">
+
+
+                <div class="section-heading section-heading-dark">
+
+
+                    <p class="section-label section-label-light">
+                        Initial UX Audit
+                    </p>
+
+
+                    <h2>
+
+                        Users had to understand the app before they
+                        could find what they needed.
+
+                    </h2>
+
+
+                    <p>
+
+                        I reviewed the existing information hierarchy,
+                        bottom navigation and service-discovery paths
+                        to identify where the interface added
+                        unnecessary effort.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="audit-grid">
+
+
+                    <!-- 01 -->
+
+                    <article class="audit-card audit-card-one">
+
+
+                        <span class="audit-number">
+                            01
+                        </span>
+
+
+                        <h3>
+                            Navigation priorities
+                        </h3>
+
+
+                        <p>
+
+                            Permanent navigation space did not always
+                            reflect the tasks most members were likely
+                            to need.
+
+                        </p>
+
+
+                        <strong>
+
+                            Primary healthcare actions competed with
+                            lower-priority functions.
+
+                        </strong>
+
+
+                    </article>
+
+
+
+                    <!-- 02 -->
+
+                    <article class="audit-card audit-card-two">
+
+
+                        <span class="audit-number">
+                            02
+                        </span>
+
+
+                        <h3>
+                            Service discoverability
+                        </h3>
+
+
+                        <p>
+
+                            Important services could sit inside broad
+                            categories that were difficult to predict
+                            without already knowing the app's
+                            structure.
+
+                        </p>
+
+
+                        <strong>
+
+                            Finding a service required category
+                            knowledge.
+
+                        </strong>
+
+
+                    </article>
+
+
+
+                    <!-- 03 -->
+
+                    <article class="audit-card audit-card-three">
+
+
+                        <span class="audit-number">
+                            03
+                        </span>
+
+
+                        <h3>
+                            Homepage hierarchy
+                        </h3>
+
+
+                        <p>
+
+                            Core tasks and promotional content did not
+                            always have a strong enough distinction in
+                            the homepage hierarchy.
+
+                        </p>
+
+
+                        <strong>
+
+                            Useful actions needed greater prominence.
+
+                        </strong>
+
+
+                    </article>
+
+
+
+                    <!-- 04 -->
+
+                    <article class="audit-card audit-card-four">
+
+
+                        <span class="audit-number">
+                            04
+                        </span>
+
+
+                        <h3>
+                            Scalability
+                        </h3>
+
+
+                        <p>
+
+                            As new services and partnerships are
+                            introduced, adding more permanent
+                            destinations would make the structure
+                            increasingly difficult to scan.
+
+                        </p>
+
+
+                        <strong>
+
+                            The architecture needed room to grow.
+
+                        </strong>
+
+
+                    </article>
+
+
+                </div>
+
+
+
+                <!-- PROJECT SCOPE -->
+
+                <aside class="scope-note">
+
+
+                    <div class="scope-note-icon">
+                        i
+                    </div>
+
+
+                    <div>
+
+
+                        <strong>
+                            Project scope
+                        </strong>
+
+
+                        <p>
+
+                            This was an independent UX redesign based
+                            on interface evaluation and information
+                            architecture analysis. The solutions shown
+                            here are design hypotheses rather than
+                            findings from Vhi user research.
+
+                        </p>
+
+
+                    </div>
+
+
+                </aside>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DESIGN CHALLENGE
+        ================================================== -->
+
+        <section class="case-section case-white reveal">
+
+            <div class="case-container">
+
+
+                <div class="challenge-card">
+
+
+                    <div
+                        class="challenge-shape challenge-shape-one"
+                        aria-hidden="true"
+                    ></div>
+
+
+                    <div
+                        class="challenge-shape challenge-shape-two"
+                        aria-hidden="true"
+                    ></div>
+
+
+
+                    <p class="section-label">
+                        Design Challenge
+                    </p>
+
+
+                    <p class="challenge-question">
+
+                        How can Vhi make a growing range of services
+                        easier to find without overwhelming members or
+                        making the app feel unfamiliar?
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVIGATION & DISCOVERABILITY
+        ================================================== -->
+
+        <section
+            class="case-section navigation-section reveal"
+            id="navigation"
+        >
+
+            <div class="case-container">
+
+
+                <div class="section-heading">
+
+
+                    <p class="section-label">
+                        01 • Navigation & Discoverability
+                    </p>
+
+
+                    <h2>
+                        Improve the routes before adding more features.
+                    </h2>
+
+
+                    <p>
+
+                        The first redesign decisions focused on giving
+                        members clearer ways to reach important
+                        functions without requiring them to understand
+                        Vhi's internal category structure.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="navigation-grid">
+
+
+                    <!-- =================================================
+                         BOTTOM NAVIGATION
+                    ================================================== -->
+
+                    <article class="solution-card">
+
+
+                        <div class="solution-heading">
+
+
+                            <span class="solution-number">
+                                01
+                            </span>
+
+
+                            <div>
+
+
+                                <small>
+                                    BOTTOM NAVIGATION
+                                </small>
+
+
+                                <h3>
+                                    Prioritise user goals.
+                                </h3>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="solution-text">
+
+
+                            <strong>
+                                Problem
+                            </strong>
+
+
+                            <p>
+
+                                Home was positioned at the edge,
+                                Parkrun occupied permanent navigation
+                                space and other important functions
+                                relied on broad categories or the More
+                                menu.
+
+                            </p>
+
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             BEFORE / AFTER NAVIGATION
+                        ================================================== -->
+
+                        <div class="navigation-comparison">
+
+
+                            <!-- CURRENT -->
+
+                            <div class="navigation-comparison-item">
+
+
+                                <span class="comparison-label">
+                                    Current Design
+                                </span>
+
+
+                                <div class="solution-image solution-image-navigation">
+
+                                    <img
+                                        src="../assets/images/vhi-bottom-nav-current.png"
+                                        alt="Current Vhi bottom navigation showing Home, My Team, Parkrun and Snap and Send"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div
+                                class="comparison-arrow"
+                                aria-hidden="true"
+                            >
+                                ↓
+                            </div>
+
+
+
+                            <!-- REDESIGN -->
+
+                            <div class="navigation-comparison-item">
+
+
+                                <span class="comparison-label comparison-label-redesign">
+                                    Redesign
+                                </span>
+
+
+                                <div class="solution-image solution-image-navigation">
+
+                                    <img
+                                        src="../assets/images/vhi-bottom-nav-real.png"
+                                        alt="Redesigned Vhi bottom navigation showing Benefits, Health, Home, Claims and More"
+                                    >
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="solution-text solution-rationale">
+
+
+                            <strong>
+                                Redesign rationale
+                            </strong>
+
+
+                            <p>
+
+                                Home moves to the centre, Claims becomes a permanent destination, Benefits consolidates promotional content and More remains available for secondary or future services. High-priority destinations are kept within the lower thumb zone, making common actions easier to reach during one-handed use.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         UNIVERSAL SEARCH
+                    ================================================== -->
+
+                    <article class="solution-card">
+
+
+                        <div class="solution-heading">
+
+
+                            <span class="solution-number solution-number-pink">
+                                02
+                            </span>
+
+
+                            <div>
+
+
+                                <small>
+                                    UNIVERSAL SEARCH
+                                </small>
+
+
+                                <h3>
+                                    Let users search by intent.
+                                </h3>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="solution-text">
+
+
+                            <strong>
+                                Problem
+                            </strong>
+
+
+                            <p>
+
+                                Without search, users needed to identify
+                                the correct category before they could
+                                locate a specific service.
+
+                            </p>
+
+
+                        </div>
+
+
+
+
+
+                        <!-- REAL REDESIGNED SEARCH -->
+
+                        <div class="search-redesign-visual">
+
+
+                            <span class="comparison-label comparison-label-redesign">
+                                Redesign
+                            </span>
+
+
+                            <div class="solution-image solution-image-search">
+
+                                <img
+                                    src="../assets/images/vhi-search-real.png"
+                                    alt="Redesigned Vhi homepage header featuring universal search and primary service shortcuts"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="solution-text solution-rationale">
+
+
+                            <strong>
+                                Redesign rationale
+                            </strong>
+
+
+                            <p>
+
+                                Universal search provides an
+                                alternative to category navigation.
+                                Members can search using familiar terms
+                                rather than remembering where a service
+                                sits inside the app.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOMEPAGE EXPERIENCE
+        ================================================== -->
+
+        <section
+            class="case-section homepage-section reveal"
+            id="homepage"
+        >
+
+            <div class="case-container homepage-layout">
+
+
+                <!-- PHONE -->
+
+                <div class="homepage-phone-area">
+
+
+                    <div class="vhi-phone feature-phone">
+
+                        <div class="vhi-phone-screen">
+
+                            <img
+                                src="../assets/images/vhi-home-redesign.png"
+                                alt="Final redesigned Vhi homepage"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- COPY -->
+
+                <div class="homepage-copy">
+
+
+                    <p class="section-label">
+                        02 • Homepage Experience
+                    </p>
+
+
+                    <h2>
+
+                        Put useful healthcare actions before
+                        promotional content.
+
+                    </h2>
+
+
+                    <p class="homepage-lead">
+
+                        The redesigned homepage creates a clearer
+                        sequence from orientation to action: familiar
+                        context, search, essential services,
+                        customisable shortcuts and then recommended
+                        content.
+
+                    </p>
+
+
+
+                    <!-- 01 -->
+
+                    <div class="homepage-feature">
+
+
+                        <span>
+                            01
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Familiarity, trust & orientation
+                            </h3>
+
+
+                            <p>
+
+                                A time-based greeting makes the
+                                experience feel responsive and
+                                familiar while confirming that the
+                                member is in their personalised Vhi
+                                environment before choosing what to do
+                                next.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 02 -->
+
+                    <div class="homepage-feature">
+
+
+                        <span>
+                            02
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Search stays visible
+                            </h3>
+
+
+                            <p>
+
+                                Universal search sits directly beneath
+                                the greeting instead of requiring
+                                members to browse through categories
+                                first.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 03 -->
+
+                    <div class="homepage-feature">
+
+
+                        <span>
+                            03
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Core services first
+                            </h3>
+
+
+                            <p>
+
+                                My Policy, Claims, Medical and Wellness
+                                provide immediate access to important
+                                high-level member needs.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 04 -->
+
+                    <div class="homepage-feature">
+
+
+                        <span>
+                            04
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Recommendations move down
+                            </h3>
+
+
+                            <p>
+
+                                Recommended features remain available,
+                                but they no longer compete with primary
+                                healthcare actions at the top of the
+                                screen.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUICK ACTIONS
+        ================================================== -->
+
+        <section
+            class="case-section quick-actions-section reveal"
+            id="quick-actions"
+        >
+
+            <div class="case-container">
+
+
+                <div class="quick-actions-intro">
+
+
+                    <div>
+
+
+                        <p class="section-label section-label-light">
+                            03 • Personalisation
+                        </p>
+
+
+                        <h2>
+
+                            Give members control over what stays
+                            immediately available.
+
+                        </h2>
+
+
+                    </div>
+
+
+
+                    <div>
+
+
+                        <p>
+
+                            Different members use different services.
+                            Quick Actions allows frequently used
+                            services to remain visible without forcing
+                            every option into permanent navigation.
+
+                        </p>
+
+
+                        <p>
+
+                            The interaction keeps the existing Vhi card
+                            language familiar while allowing the
+                            homepage to adapt to individual needs.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- QUICK ACTION PANEL -->
+
+                <div class="quick-actions-panel">
+
+
+                    <div class="quick-actions-header">
+
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+
+                        <div
+                            class="quick-actions-plus"
+                            aria-hidden="true"
+                        >
+                            +
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="quick-actions-grid">
+
+
+                        <!-- ONLINE DOCTOR -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-dot decor-dot-one"></span>
+                                <span class="decor-circle decor-circle-one"></span>
+                                <span class="decor-dot decor-dot-two"></span>
+
+                                <span class="service-symbol">
+                                    ✚
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Online Doctor
+                            </strong>
+
+
+                        </article>
+
+
+
+                        <!-- COVER CHECK -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-dot decor-dot-three"></span>
+                                <span class="decor-circle decor-circle-two"></span>
+
+                                <span class="service-symbol service-symbol-heart">
+                                    ♡
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Cover Check
+                            </strong>
+
+
+                        </article>
+
+
+
+                        <!-- DERMATOLOGY -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-circle decor-circle-three"></span>
+                                <span class="decor-dot decor-dot-four"></span>
+
+                                <span class="service-symbol">
+                                    ◉
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Dermatology
+                            </strong>
+
+
+                        </article>
+
+
+
+                        <!-- ONLINE PHYSIO -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-dot decor-dot-five"></span>
+                                <span class="decor-circle decor-circle-four"></span>
+
+                                <span class="service-symbol">
+                                    ✦
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Online Physio
+                            </strong>
+
+
+                        </article>
+
+
+
+                        <!-- PAEDIATRIC CLINICS -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-circle decor-circle-five"></span>
+                                <span class="decor-dot decor-dot-six"></span>
+
+                                <span class="service-symbol">
+                                    ♡
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Paediatric Clinics
+                            </strong>
+
+
+                        </article>
+
+
+
+                        <!-- HEALTH CHECK -->
+
+                        <article class="quick-action-card">
+
+
+                            <div class="quick-action-visual">
+
+                                <span class="decor-dot decor-dot-seven"></span>
+                                <span class="decor-circle decor-circle-six"></span>
+
+                                <span class="service-symbol">
+                                    +
+                                </span>
+
+                            </div>
+
+
+                            <strong>
+                                Health Check
+                            </strong>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- RATIONALE -->
+
+                <div class="quick-actions-rationale">
+
+
+                    <div>
+
+
+                        <span>
+                            USER CONTROL
+                        </span>
+
+
+                        <strong>
+
+                            Members choose which services deserve
+                            permanent homepage space.
+
+                        </strong>
+
+
+                    </div>
+
+
+
+                    <div>
+
+
+                        <span>
+                            SCALABILITY
+                        </span>
+
+
+                        <strong>
+
+                            New services can be added without expanding
+                            permanent navigation.
+
+                        </strong>
+
+
+                    </div>
+
+
+
+                    <div>
+
+
+                        <span>
+                            FAMILIARITY
+                        </span>
+
+
+                        <strong>
+
+                            Customisation is introduced using interface
+                            patterns already established elsewhere in
+                            the app.
+
+                        </strong>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HEALTH INFORMATION ARCHITECTURE
+        ================================================== -->
+
+        <section
+            class="case-section health-section reveal"
+            id="health"
+        >
+
+            <div class="case-container health-layout">
+
+
+                <!-- COPY -->
+
+                <div class="health-copy">
+
+
+                    <p class="section-label">
+                        04 • Health Information Architecture
+                    </p>
+
+
+                    <h2>
+
+                        Organise services around what members are
+                        trying to do.
+
+                    </h2>
+
+
+                    <p class="health-lead">
+
+                        The Health area groups related services into
+                        predictable sections so the catalogue can grow
+                        without becoming one long undifferentiated
+                        list.
+
+                    </p>
+
+
+
+                    <!-- 01 -->
+
+                    <div class="health-category">
+
+
+                        <span>
+                            01
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Get Care
+                            </h3>
+
+
+                            <p>
+
+                                Immediate healthcare access including
+                                Online Doctor, Urgent Care Clinics,
+                                Paediatric Clinics and Dermatology.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 02 -->
+
+                    <div class="health-category">
+
+
+                        <span>
+                            02
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Health Support
+                            </h3>
+
+
+                            <p>
+
+                                Ongoing support such as Nurseline,
+                                Midwife Support, Online Physio and
+                                specialist services.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 03 -->
+
+                    <div class="health-category">
+
+
+                        <span>
+                            03
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Health Tools
+                            </h3>
+
+
+                            <p>
+
+                                Supporting tools such as Symptom
+                                Checker and Health Check have their own
+                                predictable category.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- 04 -->
+
+                    <div class="health-category">
+
+
+                        <span>
+                            04
+                        </span>
+
+
+                        <div>
+
+
+                            <h3>
+                                Emergency & Travel
+                            </h3>
+
+
+                            <p>
+
+                                Travel and emergency support remains
+                                easy to identify without competing with
+                                everyday healthcare services.
+
+                            </p>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- PHONE -->
+
+                <div class="health-phone-area">
+
+
+                    <div class="vhi-phone feature-phone health-feature-phone">
+
+                        <div class="vhi-phone-screen">
+
+                            <img
+                                src="../assets/images/vhi-health-redesign.png"
+                                alt="Final redesigned Vhi Health page"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VIDEO WALKTHROUGH
+        ================================================== -->
+
+        <section
+            class="case-section walkthrough-section reveal"
+            id="walkthrough"
+        >
+
+            <div class="case-container">
+
+
+                <div class="section-heading walkthrough-heading">
+
+
+                    <p class="section-label section-label-light">
+                        Prototype Walkthrough
+                    </p>
+
+
+                    <h2>
+                        The Health structure in motion.
+                    </h2>
+
+
+                    <p>
+
+                        The walkthrough demonstrates how members can
+                        move through the reorganised healthcare
+                        catalogue while the redesigned navigation
+                        remains consistently available.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="walkthrough-showcase">
+
+
+                    <!-- FLOW -->
+
+                    <div class="walkthrough-flow">
+
+
+                        <div class="walkthrough-step">
+
+                            <span>
+                                01
+                            </span>
+
+                            <strong>
+                                Get Care
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="walkthrough-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+
+                        <div class="walkthrough-step walkthrough-step-two">
+
+                            <span>
+                                02
+                            </span>
+
+                            <strong>
+                                Support
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="walkthrough-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+
+                        <div class="walkthrough-step walkthrough-step-three">
+
+                            <span>
+                                03
+                            </span>
+
+                            <strong>
+                                Tools
+                            </strong>
+
+                        </div>
+
+
+                        <div
+                            class="walkthrough-line"
+                            aria-hidden="true"
+                        ></div>
+
+
+
+                        <div class="walkthrough-step walkthrough-step-four">
+
+                            <span>
+                                04
+                            </span>
+
+                            <strong>
+                                Travel
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- VIDEO PHONE -->
+
+                    <div class="video-device-area">
+
+
+                        <div class="video-phone">
+
+
+                            <span
+                                class="video-phone-button video-phone-button-left"
+                                aria-hidden="true"
+                            ></span>
+
+
+                            <span
+                                class="video-phone-button video-phone-button-right"
+                                aria-hidden="true"
+                            ></span>
+
+
+
+                            <div class="video-phone-screen">
+
+
+                                <video
+                                    id="vhi-walkthrough-video"
+                                    controls
+                                    playsinline
+                                    preload="metadata"
+                                    poster="../assets/images/vhi-health-redesign.png"
+                                >
+
+                                    <source
+                                        src="../assets/videos/vhi-health-walkthrough.mp4"
+                                        type="video/mp4"
+                                    >
+
+                                    Your browser does not support the
+                                    video element.
+
+                                </video>
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <p
+                            class="video-error"
+                            id="video-error"
+                            hidden
+                        >
+
+                            The walkthrough video could not be loaded.
+
+                        </p>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             DESIGN PRINCIPLES
+        ================================================== -->
+
+        <section
+            class="case-section principles-section reveal"
+            id="principles"
+        >
+
+            <div class="case-container">
+
+
+                <div class="section-heading">
+
+
+                    <p class="section-label">
+                        Design Rationale
+                    </p>
+
+
+                    <h2>
+
+                        Improve access without redesigning familiarity
+                        out of the product.
+
+                    </h2>
+
+
+                </div>
+
+
+
+                <div class="principles-grid">
+
+
+                    <article class="principle-card principle-one">
+
+
+                        <span>
+                            01
+                        </span>
+
+
+                        <h3>
+                            Prioritise
+                        </h3>
+
+
+                        <p>
+
+                            Permanent space is reserved for tasks and
+                            destinations with greater member value.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <article class="principle-card principle-two">
+
+
+                        <span>
+                            02
+                        </span>
+
+
+                        <h3>
+                            Reduce recall
+                        </h3>
+
+
+                        <p>
+
+                            Search and predictable categories reduce
+                            the need to remember where a particular
+                            service lives.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <article class="principle-card principle-three">
+
+
+                        <span>
+                            03
+                        </span>
+
+
+                        <h3>
+                            Add user control
+                        </h3>
+
+
+                        <p>
+
+                            Customisable Quick Actions allow the
+                            homepage to better reflect individual
+                            member needs.
+
+                        </p>
+
+
+                    </article>
+
+
+
+                    <article class="principle-card principle-four">
+
+
+                        <span>
+                            04
+                        </span>
+
+
+                        <h3>
+                            Design for growth
+                        </h3>
+
+
+                        <p>
+
+                            New services and partnerships can fit into
+                            the architecture without continuously
+                            expanding the main navigation.
+
+                        </p>
+
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FINAL DIRECTION
+        ================================================== -->
+
+        <section
+            class="case-section final-section reveal"
+            id="final"
+        >
+
+            <div class="case-container">
+
+
+                <div class="section-heading final-heading">
+
+
+                    <p class="section-label section-label-light">
+                        Final Direction
+                    </p>
+
+
+                    <h2>
+                        One system. Clearer routes.
+                    </h2>
+
+
+                    <p>
+
+                        Navigation, search, customisation and service
+                        organisation work together as one information
+                        architecture rather than as isolated screen
+                        changes.
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="final-phones">
+
+
+                    <!-- HOME -->
+
+                    <div class="final-phone-block">
+
+
+                        <span>
+                            HOME
+                        </span>
+
+
+                        <div class="vhi-phone final-phone">
+
+                            <div class="vhi-phone-screen">
+
+                                <img
+                                    src="../assets/images/vhi-home-redesign.png"
+                                    alt="Final Vhi Home redesign"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- CONNECTION -->
+
+                    <div class="final-connection">
+
+
+                        <strong>
+                            Shared navigation
+                        </strong>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                    </div>
+
+
+
+                    <!-- HEALTH -->
+
+                    <div class="final-phone-block">
+
+
+                        <span>
+                            HEALTH
+                        </span>
+
+
+                        <div class="vhi-phone final-phone">
+
+                            <div class="vhi-phone-screen">
+
+                                <img
+                                    src="../assets/images/vhi-health-redesign.png"
+                                    alt="Final Vhi Health redesign"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REFLECTION
+        ================================================== -->
+
+        <section
+            class="case-section reflection-section reveal"
+            id="reflection"
+        >
+
+            <div class="case-container reflection-grid">
+
+
+                <div>
+
+
+                    <p class="section-label">
+                        Reflection
+                    </p>
+
+
+                    <h2>
+
+                        Product redesign is often about deciding what
+                        deserves attention.
+
+                    </h2>
+
+
+                </div>
+
+
+
+                <div class="reflection-copy">
+
+
+                    <p>
+
+                        The most important part of this redesign was
+                        not creating additional features. It was
+                        reconsidering how existing and future services
+                        should be prioritised, grouped and accessed.
+
+                    </p>
+
+
+                    <p>
+
+                        Moving Home to the centre, introducing search
+                        and reorganising healthcare services all reduce
+                        the amount of structural knowledge required
+                        from the member.
+
+                    </p>
+
+
+                    <p>
+
+                        Customisable Quick Actions add another layer of
+                        flexibility by allowing different members to
+                        prioritise different services without
+                        increasing navigation complexity.
+
+                    </p>
+
+
+                    <p>
+
+                        The project reinforced the value of preserving
+                        familiar interaction patterns while improving
+                        the information architecture underneath them.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CASE NAVIGATION
+        ================================================== -->
+
+        <section class="case-navigation">
+
+            <div class="case-container case-navigation-inner">
+
+
+                <a
+                    class="case-navigation-link"
+                    href="../chatgpt-redesign/"
+                >
+
+                    <span
+                        class="case-nav-arrow"
+                        aria-hidden="true"
+                    >
+                        ←
+                    </span>
+
+
+                    <span>
+
+                        <small>
+                            PREVIOUS CASE STUDY
+                        </small>
+
+                        <strong>
+                            ChatGPT Redesign
+                        </strong>
+
+                    </span>
+
+                </a>
+
+
+
+                <a
+                    class="case-navigation-link case-navigation-next"
+                    href="../index.html#projects"
+                >
+
+                    <span>
+
+                        <small>
+                            BACK TO
+                        </small>
+
+                        <strong>
+                            All Projects
+                        </strong>
+
+                    </span>
+
+
+                    <span
+                        class="case-nav-arrow"
+                        aria-hidden="true"
+                    >
+                        →
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="project-footer">
+
+
+        <div class="project-footer-brand">
+
+
+            <img
+                src="../assets/images/melisa-flower.png"
+                alt=""
+            >
+
+
+            <div>
+
+
+                <strong>
+                    MELISA
+                </strong>
+
+
+                <p>
+
+                    Understanding people. Designing with purpose.
+                    Building trust through better experiences.
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <p class="project-copyright">
+            © 2026 Buket Melisa Evin. All rights reserved.
+        </p>
+
+
+    </footer>
+
+
+
+    <script src="../js/vhi.js"></script>
+
+
+</body>
+
+</html>
