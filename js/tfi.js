@@ -14,14 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const videoError =
         document.getElementById("video-error");
-
-    const prototypePhone =
-        document.getElementById("prototype-phone");
-
-    const prototypeFullscreenButton =
-        document.getElementById("prototype-fullscreen-button");
-
-
     /* =====================================================
        HEADER
     ====================================================== */
@@ -148,54 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     }
-
-
-    /* =====================================================
-       PROTOTYPE FULLSCREEN
-
-       Fullscreen our custom phone rather than opening
-       a separate Figma URL.
-    ====================================================== */
-
-    if (
-        prototypeFullscreenButton &&
-        prototypePhone
-    ) {
-
-        prototypeFullscreenButton.addEventListener(
-            "click",
-            async () => {
-
-                try {
-
-                    if (
-                        prototypePhone.requestFullscreen
-                    ) {
-
-                        await prototypePhone.requestFullscreen();
-
-                    } else if (
-                        prototypePhone.webkitRequestFullscreen
-                    ) {
-
-                        prototypePhone.webkitRequestFullscreen();
-
-                    }
-
-                } catch (error) {
-
-                    console.error(
-                        "Could not open prototype fullscreen:",
-                        error
-                    );
-
-                }
-
-            }
-        );
-
-    }
-
 
     /* =====================================================
        VIDEO

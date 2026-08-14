@@ -22,10 +22,15 @@
         href="../css/vhi.css"
     >
 
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
+
 </head>
 
 
-<body>
+<body data-project="vhi">
 
 
     <!-- =====================================================
@@ -57,7 +62,7 @@
 
             <a
                 class="project-brand"
-                href="../index.html"
+                href="../"
                 aria-label="Return to Melisa portfolio homepage"
             >
 
@@ -71,6 +76,10 @@
                     MELISA
                 </span>
 
+                <span class="project-brand-home">
+                    Home
+                </span>
+
             </a>
 
 
@@ -79,19 +88,19 @@
 
             <div class="project-nav-links">
 
-                <a href="../index.html">
+                <a href="../">
                     Home
                 </a>
 
-                <a href="../index.html#projects">
+                <a href="../" data-home-target="projects">
                     Projects
                 </a>
 
-                <a href="../index.html#about">
+                <a href="../" data-home-target="about">
                     About
                 </a>
 
-                <a href="../index.html#contact">
+                <a href="../" data-home-target="contact">
                     Contact
                 </a>
 
@@ -99,24 +108,63 @@
 
 
 
-            <!-- PROJECT CONTEXT -->
+            <!-- PROJECT SWITCHER -->
 
-            <div
-                class="project-context"
-                aria-label="Current page: Vhi case study"
-            >
+            <div class="project-switcher">
 
-                <span
-                    class="project-context-dot"
-                    aria-hidden="true"
-                ></span>
+                <button
+                    class="project-context project-switcher-toggle"
+                    type="button"
+                    aria-label="Switch case study"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="project-switcher-menu"
+                >
 
-                <span>
-                    Vhi Case Study
-                </span>
+                    <span
+                        class="project-context-dot"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="project-context-label">
+                        Vhi Case Study
+                    </span>
+
+                    <svg
+                        class="project-context-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M6 9L12 15L18 9"></path>
+                    </svg>
+
+                </button>
+
+
+                <div
+                    class="project-switcher-menu"
+                    id="project-switcher-menu"
+                >
+
+                    <a href="../tfi-live-redesign/">
+                        <span>TFI Live Redesign</span>
+                    </a>
+
+                    <a href="../chatgpt-redesign/">
+                        <span>ChatGPT Redesign</span>
+                    </a>
+
+                    <a
+                        href="../vhi-redesign/"
+                        aria-current="page"
+                    >
+                        <span>Vhi App Redesign</span>
+                        <span class="project-switcher-current">Current</span>
+                    </a>
+
+                </div>
 
             </div>
-
 
         </nav>
 
@@ -157,7 +205,7 @@
 
                     <a
                         class="back-link"
-                        href="../index.html#projects"
+                        href="../" data-home-target="projects"
                     >
 
                         <span aria-hidden="true">
@@ -314,9 +362,9 @@
 
                     <!-- HOME PHONE -->
 
-                    <div class="vhi-phone hero-phone hero-phone-home">
+                    <div class="device-phone device-phone-hero vhi-phone hero-phone hero-phone-home">
 
-                        <div class="vhi-phone-screen">
+                        <div class="device-screen vhi-phone-screen">
 
                             <img
                                 src="../assets/images/vhi-home-redesign.png"
@@ -331,9 +379,9 @@
 
                     <!-- HEALTH PHONE -->
 
-                    <div class="vhi-phone hero-phone hero-phone-health">
+                    <div class="device-phone device-phone-hero vhi-phone hero-phone hero-phone-health">
 
-                        <div class="vhi-phone-screen">
+                        <div class="device-screen vhi-phone-screen">
 
                             <img
                                 src="../assets/images/vhi-health-redesign.png"
@@ -1026,9 +1074,9 @@
                 <div class="homepage-phone-area">
 
 
-                    <div class="vhi-phone feature-phone">
+                    <div class="device-phone device-phone-feature vhi-phone feature-phone">
 
-                        <div class="vhi-phone-screen">
+                        <div class="device-screen vhi-phone-screen">
 
                             <img
                                 src="../assets/images/vhi-home-redesign.png"
@@ -1737,9 +1785,9 @@
                 <div class="health-phone-area">
 
 
-                    <div class="vhi-phone feature-phone health-feature-phone">
+                    <div class="device-phone device-phone-feature vhi-phone feature-phone health-feature-phone">
 
-                        <div class="vhi-phone-screen">
+                        <div class="device-screen vhi-phone-screen">
 
                             <img
                                 src="../assets/images/vhi-health-redesign.png"
@@ -1889,7 +1937,7 @@
                     <div class="video-device-area">
 
 
-                        <div class="video-phone">
+                        <div class="device-phone device-phone-large video-phone">
 
 
                             <span
@@ -1905,7 +1953,7 @@
 
 
 
-                            <div class="video-phone-screen">
+                            <div class="device-screen video-phone-screen">
 
 
                                 <video
@@ -2155,9 +2203,9 @@
                         </span>
 
 
-                        <div class="vhi-phone final-phone">
+                        <div class="device-phone device-phone-feature vhi-phone final-phone">
 
-                            <div class="vhi-phone-screen">
+                            <div class="device-screen vhi-phone-screen">
 
                                 <img
                                     src="../assets/images/vhi-home-redesign.png"
@@ -2202,9 +2250,9 @@
                         </span>
 
 
-                        <div class="vhi-phone final-phone">
+                        <div class="device-phone device-phone-feature vhi-phone final-phone">
 
-                            <div class="vhi-phone-screen">
+                            <div class="device-screen vhi-phone-screen">
 
                                 <img
                                     src="../assets/images/vhi-health-redesign.png"
@@ -2351,7 +2399,7 @@
 
                 <a
                     class="case-navigation-link case-navigation-next"
-                    href="../index.html#projects"
+                    href="../" data-home-target="projects"
                 >
 
                     <span>
@@ -2434,6 +2482,7 @@
 
 
 
+    <script src="../js/project-nav.js"></script>
     <script src="../js/vhi.js"></script>
 
 

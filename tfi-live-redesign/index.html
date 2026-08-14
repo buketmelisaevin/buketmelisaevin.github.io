@@ -20,10 +20,15 @@
         rel="stylesheet"
         href="../css/tfi.css"
     >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
 </head>
 
 
-<body>
+<body data-project="tfi">
 
 
     <!-- =====================================================
@@ -55,7 +60,7 @@
 
             <a
                 class="project-brand"
-                href="../index.html"
+                href="../"
                 aria-label="Return to Melisa portfolio homepage"
             >
 
@@ -69,6 +74,10 @@
                     MELISA
                 </span>
 
+                <span class="project-brand-home">
+                    Home
+                </span>
+
             </a>
 
 
@@ -77,19 +86,19 @@
 
             <div class="project-nav-links">
 
-                <a href="../index.html">
+                <a href="../">
                     Home
                 </a>
 
-                <a href="../index.html#projects">
+                <a href="../" data-home-target="projects">
                     Projects
                 </a>
 
-                <a href="../index.html#about">
+                <a href="../" data-home-target="about">
                     About
                 </a>
 
-                <a href="../index.html#contact">
+                <a href="../" data-home-target="contact">
                     Contact
                 </a>
 
@@ -97,24 +106,63 @@
 
 
 
-            <!-- PROJECT CONTEXT -->
+            <!-- PROJECT SWITCHER -->
 
-            <div
-                class="project-context"
-                aria-label="Current page: TFI Live case study"
-            >
+            <div class="project-switcher">
 
-                <span
-                    class="project-context-dot"
-                    aria-hidden="true"
-                ></span>
+                <button
+                    class="project-context project-switcher-toggle"
+                    type="button"
+                    aria-label="Switch case study"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="project-switcher-menu"
+                >
 
-                <span>
-                    TFI Live Case Study
-                </span>
+                    <span
+                        class="project-context-dot"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="project-context-label">
+                        TFI Live Case Study
+                    </span>
+
+                    <svg
+                        class="project-context-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M6 9L12 15L18 9"></path>
+                    </svg>
+
+                </button>
+
+
+                <div
+                    class="project-switcher-menu"
+                    id="project-switcher-menu"
+                >
+
+                    <a
+                        href="../tfi-live-redesign/"
+                        aria-current="page"
+                    >
+                        <span>TFI Live Redesign</span>
+                        <span class="project-switcher-current">Current</span>
+                    </a>
+
+                    <a href="../chatgpt-redesign/">
+                        <span>ChatGPT Redesign</span>
+                    </a>
+
+                    <a href="../vhi-redesign/">
+                        <span>Vhi App Redesign</span>
+                    </a>
+
+                </div>
 
             </div>
-
 
         </nav>
 
@@ -159,7 +207,7 @@
 
                     <a
                         class="back-link"
-                        href="../index.html#projects"
+                        href="../" data-home-target="projects"
                     >
 
                         <span aria-hidden="true">
@@ -316,9 +364,10 @@
 
 
 
-                    <div class="hero-phone hero-phone-back">
+                    <div class="device-phone device-phone-hero hero-phone hero-phone-back">
 
                         <img
+                        class="device-screen"
                             src="../assets/images/tfi-details.png"
                             alt="TFI Live redesigned journey detail screen"
                         >
@@ -327,9 +376,10 @@
 
 
 
-                    <div class="hero-phone hero-phone-front">
+                    <div class="device-phone device-phone-hero hero-phone hero-phone-front">
 
                         <img
+                        class="device-screen"
                             src="../assets/images/tfi-results.png"
                             alt="TFI Live redesigned journey results and map screen"
                         >
@@ -1272,24 +1322,34 @@
                         </p>
 
 
-                        <button
+                        <a
                             class="prototype-fullscreen-button"
                             id="prototype-fullscreen-button"
-                            type="button"
+                            href="https://www.figma.com/proto/1Cesj7DUKmLHnH2sstMQpi/TFI-Live-Redesign?node-id=2004-2021&t=3llXY7RjQOfw53Lb-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2004%3A2021"
+                            target="_blank"
+                            rel="noopener noreferrer"
                         >
 
-                            Open Fullscreen Prototype
-
-                            <span aria-hidden="true">
-                                ↗
+                            <span>
+                                Open Fullscreen Prototype
                             </span>
 
-                        </button>
+                            <svg
+                                class="external-link-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M9 5H5V19H19V15"></path>
+                                <path d="M12 5H19V12"></path>
+                                <path d="M19 5L10 14"></path>
+                            </svg>
+
+                        </a>
 
 
                         <p class="prototype-note">
-                            The embedded version on the right is
-                            fully interactive too.
+                            The embedded prototype on this page is fully
+                            interactive too.
                         </p>
 
                     </div>
@@ -1304,7 +1364,7 @@
                         <!-- OUR PHONE FRAME -->
 
                         <div
-                            class="prototype-phone"
+                            class="device-phone device-phone-large prototype-phone"
                             id="prototype-phone"
                         >
 
@@ -1336,7 +1396,7 @@
 
                             <!-- SCREEN -->
 
-                            <div class="prototype-phone-screen">
+                            <div class="device-screen prototype-phone-screen">
 
                                 <iframe
                                     id="prototype-iframe"
@@ -1488,7 +1548,7 @@
             <div class="video-device-area">
 
 
-                <div class="video-phone">
+                <div class="device-phone device-phone-large video-phone">
 
 
                     <!-- SIDE BUTTONS -->
@@ -1519,7 +1579,7 @@
 
                     <!-- VIDEO -->
 
-                    <div class="video-phone-screen">
+                    <div class="device-screen video-phone-screen">
 
                         <video
                             id="prototype-video"
@@ -1728,7 +1788,17 @@
 
 
                         <div class="testing-symbol testing-symbol-orange">
-                            ↗
+
+                            <svg
+                                class="external-link-icon"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true"
+                            >
+                                <path d="M9 5H5V19H19V15"></path>
+                                <path d="M12 5H19V12"></path>
+                                <path d="M19 5L10 14"></path>
+                            </svg>
+
                         </div>
 
 
@@ -1854,7 +1924,7 @@
 
                 <a
                     class="case-navigation-link"
-                    href="../index.html#projects"
+                    href="../" data-home-target="projects"
                 >
 
                     <span
@@ -1961,6 +2031,7 @@
 
 
 
+    <script src="../js/project-nav.js"></script>
     <script src="../js/tfi.js"></script>
 
 

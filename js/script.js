@@ -20,6 +20,116 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
+       CLEAN HOMEPAGE URL + SECTION NAVIGATION
+    ====================================================== */
+
+    const initialHash =
+        window.location.hash.replace("#", "");
+
+    const storedTarget =
+        sessionStorage.getItem("melisa-scroll-target");
+
+
+    function getCleanHomePath() {
+
+        return window.location.pathname.replace(
+            /index\.html$/,
+            ""
+        );
+
+    }
+
+
+    function keepHomeUrlClean() {
+
+        const cleanUrl =
+            getCleanHomePath() +
+            window.location.search;
+
+
+        window.history.replaceState(
+            null,
+            "",
+            cleanUrl
+        );
+
+    }
+
+
+    function scrollToHomeSection(targetId, behavior = "smooth") {
+
+        const target =
+            document.getElementById(targetId);
+
+
+        if (!target) {
+            return;
+        }
+
+
+        target.scrollIntoView({
+            behavior: behavior,
+            block: "start"
+        });
+
+
+        keepHomeUrlClean();
+
+    }
+
+
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+
+        link.addEventListener(
+            "click",
+            (event) => {
+
+                const targetId =
+                    link.getAttribute("href").replace("#", "");
+
+
+                if (!targetId) {
+                    return;
+                }
+
+
+                event.preventDefault();
+
+                scrollToHomeSection(targetId);
+
+            }
+        );
+
+    });
+
+
+    keepHomeUrlClean();
+
+
+    const arrivalTarget =
+        storedTarget || initialHash;
+
+
+    if (arrivalTarget) {
+
+        sessionStorage.removeItem(
+            "melisa-scroll-target"
+        );
+
+
+        window.requestAnimationFrame(() => {
+
+            scrollToHomeSection(
+                arrivalTarget,
+                "auto"
+            );
+
+        });
+
+    }
+
+
+    /* =====================================================
        APPLY THEME
     ====================================================== */
 

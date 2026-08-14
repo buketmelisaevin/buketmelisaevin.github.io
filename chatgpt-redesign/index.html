@@ -20,10 +20,15 @@
         rel="stylesheet"
         href="../css/chatgpt.css"
     >
+
+    <link
+        rel="stylesheet"
+        href="../css/components.css"
+    >
 </head>
 
 
-<body>
+<body data-project="chatgpt">
 
 
     <!-- =====================================================
@@ -55,7 +60,7 @@
 
             <a
                 class="project-brand"
-                href="../index.html"
+                href="../"
                 aria-label="Return to Melisa portfolio homepage"
             >
 
@@ -69,6 +74,10 @@
                     MELISA
                 </span>
 
+                <span class="project-brand-home">
+                    Home
+                </span>
+
             </a>
 
 
@@ -77,19 +86,19 @@
 
             <div class="project-nav-links">
 
-                <a href="../index.html">
+                <a href="../">
                     Home
                 </a>
 
-                <a href="../index.html#projects">
+                <a href="../" data-home-target="projects">
                     Projects
                 </a>
 
-                <a href="../index.html#about">
+                <a href="../" data-home-target="about">
                     About
                 </a>
 
-                <a href="../index.html#contact">
+                <a href="../" data-home-target="contact">
                     Contact
                 </a>
 
@@ -97,24 +106,63 @@
 
 
 
-            <!-- PROJECT CONTEXT -->
+            <!-- PROJECT SWITCHER -->
 
-            <div
-                class="project-context"
-                aria-label="Current page: ChatGPT case study"
-            >
+            <div class="project-switcher">
 
-                <span
-                    class="project-context-dot"
-                    aria-hidden="true"
-                ></span>
+                <button
+                    class="project-context project-switcher-toggle"
+                    type="button"
+                    aria-label="Switch case study"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="project-switcher-menu"
+                >
 
-                <span>
-                    ChatGPT Case Study
-                </span>
+                    <span
+                        class="project-context-dot"
+                        aria-hidden="true"
+                    ></span>
+
+                    <span class="project-context-label">
+                        ChatGPT Case Study
+                    </span>
+
+                    <svg
+                        class="project-context-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M6 9L12 15L18 9"></path>
+                    </svg>
+
+                </button>
+
+
+                <div
+                    class="project-switcher-menu"
+                    id="project-switcher-menu"
+                >
+
+                    <a href="../tfi-live-redesign/">
+                        <span>TFI Live Redesign</span>
+                    </a>
+
+                    <a
+                        href="../chatgpt-redesign/"
+                        aria-current="page"
+                    >
+                        <span>ChatGPT Redesign</span>
+                        <span class="project-switcher-current">Current</span>
+                    </a>
+
+                    <a href="../vhi-redesign/">
+                        <span>Vhi App Redesign</span>
+                    </a>
+
+                </div>
 
             </div>
-
 
         </nav>
 
@@ -156,7 +204,7 @@
 
                     <a
                         class="back-link"
-                        href="../index.html#projects"
+                        href="../" data-home-target="projects"
                     >
 
                         <span aria-hidden="true">
@@ -291,9 +339,10 @@
 
 
 
-                    <div class="hero-phone hero-phone-back">
+                    <div class="device-phone device-phone-hero hero-phone hero-phone-back">
 
                         <img
+                            class="device-screen"
                             src="../assets/images/chatgpt-response.png"
                             alt="Redesigned ChatGPT response interface"
                         >
@@ -302,9 +351,10 @@
 
 
 
-                    <div class="hero-phone hero-phone-front">
+                    <div class="device-phone device-phone-hero hero-phone hero-phone-front">
 
                         <img
+                            class="device-screen"
                             src="../assets/images/chatgpt-prompt.png"
                             alt="Redesigned ChatGPT prompting interface"
                         >
@@ -902,6 +952,15 @@
                             information the AI needs.
                         </p>
 
+                        <p>
+                            PromptGPT is deliberately temporary. It holds
+                            the prompt-building context only for the
+                            current request, presents the structured prompt
+                            for review and editing, and disappears once the
+                            prompt is submitted so it does not permanently
+                            occupy the conversation.
+                        </p>
+
                     </div>
 
 
@@ -1022,11 +1081,12 @@
 
                     <!-- SCREEN -->
 
-                    <div class="concept-phone concept-phone-prompt">
+                    <div class="device-phone device-phone-feature concept-phone concept-phone-prompt">
 
                         <div class="concept-phone-island"></div>
 
                         <img
+                            class="device-screen"
                             src="../assets/images/chatgpt-prompt.png"
                             alt="PromptGPT prompting support redesign"
                         >
@@ -1104,11 +1164,12 @@
 
                 <!-- SCREEN -->
 
-                <div class="concept-phone concept-phone-response">
+                <div class="device-phone device-phone-feature concept-phone concept-phone-response">
 
                     <div class="concept-phone-island"></div>
 
                     <img
+                            class="device-screen"
                         src="../assets/images/chatgpt-response.png"
                         alt="Structured ChatGPT response redesign"
                     >
@@ -1256,111 +1317,27 @@
                 <div class="transparency-layout">
 
 
-                    <div class="resource-panel">
+                    
 
+                    <div
+                        class="transparency-device-area"
+                        aria-label="ChatGPT response concept showing resource status and resource library access"
+                    >
 
-                        <div class="resource-panel-header">
+                        <div class="device-phone device-phone-large transparency-phone">
 
-                            <div>
-
-                                <span>
-                                    Supporting resources
-                                </span>
-
-                                <strong>
-                                    Understand where the answer comes
-                                    from.
-                                </strong>
-
-                            </div>
-
-
-                            <span class="resource-count">
-                                3
-                            </span>
+                            <img
+                                class="device-screen"
+                                src="../assets/images/chatgpt-response.png"
+                                alt="ChatGPT response concept showing the New resources added status and resource library shortcut"
+                            >
 
                         </div>
-
-
-
-                        <div class="resource-item">
-
-                            <div class="resource-icon">
-                                01
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Source title
-                                </strong>
-
-                                <span>
-                                    Relevant supporting information
-                                </span>
-
-                            </div>
-
-                            <span class="resource-arrow">
-                                ↗
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="resource-item">
-
-                            <div class="resource-icon resource-icon-blue">
-                                02
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Source title
-                                </strong>
-
-                                <span>
-                                    Additional context or evidence
-                                </span>
-
-                            </div>
-
-                            <span class="resource-arrow">
-                                ↗
-                            </span>
-
-                        </div>
-
-
-
-                        <div class="resource-item">
-
-                            <div class="resource-icon resource-icon-purple">
-                                03
-                            </div>
-
-                            <div>
-
-                                <strong>
-                                    Source title
-                                </strong>
-
-                                <span>
-                                    Further reading
-                                </span>
-
-                            </div>
-
-                            <span class="resource-arrow">
-                                ↗
-                            </span>
-
-                        </div>
-
 
                     </div>
+
+
+
 
 
 
@@ -1432,6 +1409,56 @@
                                     to inspect the basis of information
                                     rather than relying on presentation
                                     alone.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="transparency-point">
+
+                            <span>
+                                04
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Resource updates stay visible
+                                </h3>
+
+                                <p>
+                                    The “New resources added” status makes
+                                    newly available supporting material
+                                    visible without interrupting the
+                                    conversation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="transparency-point">
+
+                            <span>
+                                05
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    A predictable place to return
+                                </h3>
+
+                                <p>
+                                    The resource-library shortcut provides
+                                    a persistent entry point for revisiting
+                                    supporting material from the
+                                    conversation.
                                 </p>
 
                             </div>
@@ -1711,11 +1738,12 @@
                 <div class="final-screens">
 
 
-                    <div class="final-phone final-phone-left">
+                    <div class="device-phone device-phone-feature final-phone final-phone-left">
 
                         <div class="final-phone-island"></div>
 
                         <img
+                            class="device-screen"
                             src="../assets/images/chatgpt-prompt.png"
                             alt="Final PromptGPT concept screen"
                         >
@@ -1724,11 +1752,12 @@
 
 
 
-                    <div class="final-phone final-phone-right">
+                    <div class="device-phone device-phone-feature final-phone final-phone-right">
 
                         <div class="final-phone-island"></div>
 
                         <img
+                            class="device-screen"
                             src="../assets/images/chatgpt-response.png"
                             alt="Final structured response concept screen"
                         >
@@ -1931,6 +1960,7 @@
 
 
 
+    <script src="../js/project-nav.js"></script>
     <script src="../js/chatgpt.js"></script>
 
 

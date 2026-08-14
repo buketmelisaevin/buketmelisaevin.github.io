@@ -1,0 +1,582 @@
+/* =========================================================
+   SHARED PORTFOLIO COMPONENTS
+
+   This file contains visual components used across multiple
+   pages. It is intentionally loaded AFTER each page's own
+   stylesheet so shared behaviour stays consistent.
+========================================================= */
+
+
+/* =========================================================
+   1. PROJECT COLOURS
+========================================================= */
+
+body[data-project="tfi"] {
+    --project-ui-accent: #01A56B;
+    --project-ui-accent-dark: #006C50;
+    --project-ui-soft: #F1FAF6;
+    --project-ui-border: #CCEADB;
+}
+
+body[data-project="chatgpt"] {
+    --project-ui-accent: #6D5CE7;
+    --project-ui-accent-dark: #5040C5;
+    --project-ui-soft: #F3EEFF;
+    --project-ui-border: #DDD5FF;
+}
+
+body[data-project="vhi"] {
+    --project-ui-accent: #C70A58;
+    --project-ui-accent-dark: #5B087D;
+    --project-ui-soft: #FBEAF2;
+    --project-ui-border: #E7CDE0;
+}
+
+
+/* =========================================================
+   2. SHARED PHONE DEVICE LANGUAGE
+========================================================= */
+
+/*
+   Every phone in the portfolio uses the same base component.
+   Page-specific styles are still responsible for size and position;
+   this shared layer controls the physical device itself.
+*/
+
+.device-phone {
+    --device-radius: 40px;
+    --device-screen-radius: 32px;
+
+    padding: 7px;
+
+    background: #111114;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.82);
+
+    border-radius: var(--device-radius);
+
+    box-shadow:
+        0 28px 68px rgba(22, 16, 30, 0.22);
+
+    isolation: isolate;
+}
+
+
+/* Size variants */
+
+.device-phone-preview {
+    --device-radius: 30px;
+    --device-screen-radius: 23px;
+}
+
+.device-phone-large {
+    --device-radius: 50px;
+    --device-screen-radius: 42px;
+}
+
+
+/* One shared Dynamic Island treatment */
+
+.device-phone::before {
+    content: "";
+
+    position: absolute;
+    z-index: 30;
+
+    top: clamp(8px, 2%, 16px);
+    left: 50%;
+
+    width: clamp(44px, 30%, 108px);
+    height: auto;
+
+    aspect-ratio: 5.2 / 1;
+
+    transform: translateX(-50%);
+
+    background: #050506;
+
+    border-radius: 999px;
+
+    pointer-events: none;
+}
+
+
+/* Hide older one-off islands so every phone uses the same one. */
+
+.prototype-dynamic-island,
+.video-dynamic-island,
+.concept-phone-island,
+.final-phone-island,
+.prototype-phone-side-button,
+.video-phone-button {
+    display: none;
+}
+
+
+/* Shared screen corners */
+
+.device-screen {
+    border-radius: var(--device-screen-radius);
+}
+
+
+/* Direct screenshot inside a device */
+
+.device-phone > img.device-screen {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    aspect-ratio: 402 / 874;
+
+    object-fit: cover;
+    object-position: top center;
+
+    background: #FFFFFF;
+
+    border-radius: var(--device-screen-radius);
+}
+
+
+/* Homepage preview devices have a fixed outer aspect ratio, so the
+   screenshot fills the available inner height rather than letterboxing. */
+
+.device-phone-preview > img.device-screen {
+    height: 100%;
+
+    aspect-ratio: auto;
+}
+
+
+/* Nested screen container */
+
+.device-phone > .device-screen:not(img) {
+    overflow: hidden;
+
+    border-radius: var(--device-screen-radius);
+
+    transform: translateZ(0);
+}
+
+.device-phone > .device-screen > img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: top center;
+
+    background: #FFFFFF;
+
+    border-radius: inherit;
+}
+
+
+/* iOS Safari may promote <video> to its own compositing layer.
+   The mask keeps the media clipped to the device screen. */
+
+.video-phone-screen {
+    -webkit-mask-image:
+        -webkit-radial-gradient(
+            white,
+            black
+        );
+
+    transform: translateZ(0);
+}
+
+.video-phone-screen video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: top center;
+
+    margin: 0;
+
+    border: 0;
+    border-radius: inherit;
+
+    transform: translateZ(0);
+}
+
+
+/* =========================================================
+   3. HOMEPAGE PROJECT PHONE COMPOSITIONS
+========================================================= */
+
+.project-visual {
+    min-height: 460px;
+}
+
+
+/* Both phones sit on the same baseline so neither is cut off by
+   the project-content card below it. */
+
+.phone-preview-left,
+.phone-preview-right {
+    bottom: 42px;
+}
+
+.phone-preview-left {
+    left: 11%;
+
+    transform: rotate(-3deg);
+}
+
+.phone-preview-right {
+    right: 11%;
+
+    transform: rotate(3deg);
+}
+
+
+/* =========================================================
+   4. PROJECT SWITCHER
+========================================================= */
+
+.project-switcher {
+    position: relative;
+
+    flex-shrink: 0;
+}
+
+.project-switcher-toggle {
+    appearance: none;
+    -webkit-appearance: none;
+
+    margin: 0;
+
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+.project-switcher-toggle .project-context-chevron {
+    width: 15px;
+    height: 15px;
+
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    transition: transform 0.2s ease;
+}
+
+.project-switcher-toggle[aria-expanded="true"] .project-context-chevron {
+    transform: rotate(180deg);
+}
+
+.project-switcher-menu {
+    position: absolute;
+    z-index: 100;
+
+    top: calc(100% + 10px);
+    right: 0;
+
+    width: min(280px, 82vw);
+
+    padding: 0.55rem;
+
+    display: none;
+
+    background: #FFFFFF;
+
+    border:
+        1px solid rgba(25, 20, 30, 0.10);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 20px 55px rgba(25, 20, 30, 0.16);
+}
+
+.project-switcher-menu.is-open {
+    display: grid;
+
+    gap: 0.25rem;
+}
+
+.project-switcher-menu a {
+    min-height: 46px;
+
+    padding:
+        0.72rem
+        0.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 0.8rem;
+
+    color: #29232D;
+
+    border-radius: 12px;
+
+    font-size: 0.86rem;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    transition:
+        background 0.18s ease,
+        color 0.18s ease;
+}
+
+.project-switcher-menu a:hover,
+.project-switcher-menu a:focus-visible {
+    background: var(--project-ui-soft);
+    color: var(--project-ui-accent-dark);
+}
+
+.project-switcher-menu a[aria-current="page"] {
+    background: var(--project-ui-soft);
+    color: var(--project-ui-accent-dark);
+}
+
+.project-switcher-current {
+    color: var(--project-ui-accent);
+
+    font-size: 0.68rem;
+    font-weight: 800;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+/* Desktop keeps the existing MELISA treatment. */
+
+.project-brand-home {
+    display: none;
+}
+
+
+/* =========================================================
+   5. CONSISTENT EXTERNAL-LINK ICONS
+========================================================= */
+
+.external-link-icon {
+    width: 1em;
+    height: 1em;
+
+    display: inline-block;
+    flex-shrink: 0;
+
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    vertical-align: -0.12em;
+}
+
+.testing-symbol .external-link-icon {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+
+
+/* =========================================================
+   6. CASE-STUDY NAVIGATION
+========================================================= */
+
+.case-navigation-link {
+    min-width: 0;
+}
+
+.case-navigation-link strong {
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   7. MOBILE
+========================================================= */
+
+@media (max-width: 780px) {
+
+    .project-navbar {
+        min-height: 68px;
+    }
+
+    .project-nav-links {
+        display: none;
+    }
+
+    .project-brand-flower {
+        width: 30px;
+        height: 30px;
+    }
+
+
+    /* Figma is enlarged on desktop to crop its presentation canvas.
+       Mobile browsers already fit the embed tightly, so use the full
+       iframe instead of applying the desktop zoom. */
+
+    .prototype-phone-screen iframe {
+        top: 50%;
+        left: 50%;
+
+        width: 100% !important;
+        height: 100% !important;
+
+        transform: translate(-50%, -50%);
+    }
+
+
+    /* Make the homepage preview feel centred and give the devices
+       a clear bottom margin above the card content. */
+
+    .project-visual {
+        min-height: 440px;
+    }
+
+    .phone-preview-left,
+    .phone-preview-right {
+        bottom: 56px;
+    }
+
+
+    /* Project-page brand becomes explicit navigation on mobile. */
+
+    .project-brand-name {
+        display: none;
+    }
+
+    .project-brand-home {
+        display: inline;
+
+        color: #29232D;
+
+        font-size: 1rem;
+        font-weight: 750;
+
+        letter-spacing: 0;
+    }
+
+
+    /* Keep the project name visible instead of collapsing it to a dot. */
+
+    .project-context {
+        width: auto;
+        height: auto;
+
+        padding:
+            0.5rem
+            0.7rem;
+
+        gap: 0.4rem;
+
+        justify-content: center;
+
+        font-size: 0.68rem;
+    }
+
+    .project-context span:last-of-type {
+        display: inline;
+    }
+
+    .project-context-dot {
+        width: 7px;
+        height: 7px;
+    }
+
+    .project-context-chevron {
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+
+    /* Dropdown stays within the viewport. */
+
+    .project-switcher-menu {
+        right: 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    /* Existing page styles stack these links vertically. Keeping them
+       as two equal columns improves alignment without shrinking type. */
+
+    .case-navigation-inner {
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        align-items: start;
+
+        gap: 1rem;
+    }
+
+    .case-navigation-link {
+        width: 100%;
+
+        align-items: flex-start;
+    }
+
+    .case-navigation-next {
+        justify-content: flex-end;
+
+        text-align: right;
+    }
+
+
+    /* Keep project-switcher text visible on small phones. */
+
+    .project-context span:last-of-type {
+        display: inline;
+    }
+
+    .project-context {
+        width: auto;
+        height: auto;
+
+        padding:
+            0.46rem
+            0.58rem;
+    }
+
+
+    /* Keep homepage devices fully inside the visual card. */
+
+    .phone-preview-left {
+        left: 5%;
+    }
+
+    .phone-preview-right {
+        right: 5%;
+    }
+
+}
+
+
+/* =========================================================
+   8. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .project-context-chevron,
+    .project-switcher-menu a {
+        transition: none;
+    }
+
+}
